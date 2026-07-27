@@ -8814,6 +8814,65 @@ h1, h2, h3, h4, h5,
     font-weight: 700;
     color: #6ec5b8; }
 
+.skills-card {
+  width: 100%;
+  height: auto !important;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+.skills-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: #FFAC00 !important;
+  box-shadow: 0 10px 25px rgba(255, 172, 0, 0.15);
+  transform: translateY(-3px);
+}
+.skills-card .icon {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  flex-shrink: 0;
+  background: #FFAC00;
+  border-radius: 50%;
+}
+.skills-card .icon span {
+  color: #000;
+  font-size: 22px;
+}
+.skills-card h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+.skills-badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.skills-badge-list li {
+  background: rgba(255, 172, 0, 0.1);
+  color: #FFAC00;
+  border: 1px solid rgba(255, 172, 0, 0.25);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+.skills-badge-list li:hover {
+  background: #FFAC00;
+  color: #000;
+  border-color: #FFAC00;
+  transform: translateY(-2px);
+}
+
 .ftco-partner {
   padding: 4em 0 !important; }
   .ftco-partner .partner {
