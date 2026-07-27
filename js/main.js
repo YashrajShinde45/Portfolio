@@ -82,6 +82,21 @@
 
 	onePageClick();
 	
+	var handleResume = function() {
+		$(document).on('click', '#resume-btn', function(e) {
+			var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || $(window).width() <= 768;
+			if (isMobile) {
+				e.preventDefault();
+				var link = document.createElement('a');
+				link.href = 'Resume2026.pdf';
+				link.download = 'Yashraj_Shinde_Resume.pdf';
+				document.body.appendChild(link);
+				link.click();
+				document.body.removeChild(link);
+			}
+		});
+	};
+	handleResume();
 
 	var carousel = function() {
 		$('.home-slider').owlCarousel({
