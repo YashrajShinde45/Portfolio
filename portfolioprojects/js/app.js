@@ -42,20 +42,152 @@
     }
   }
 
+  // --- Lightbox Gallery Module ---
+  const Lightbox = (function () {
+    let modal, overlay, stageImg, captionCounter, captionTitle, closeBtn, prevBtn, nextBtn;
+    let currentImages = [];
+    let currentIndex = 0;
+    let currentProjectName = '';
+
+    function createModal() {
+      if (document.getElementById('lightboxModal')) return;
+
+      modal = document.createElement('div');
+      modal.id = 'lightboxModal';
+      modal.className = 'lightbox-modal';
+      modal.setAttribute('aria-hidden', 'true');
+      modal.setAttribute('role', 'dialog');
+      modal.innerHTML = `
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+          <button class="lightbox-close" id="lightboxClose" aria-label="Close modal">✕</button>
+          <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
+          <div class="lightbox-stage">
+            <img id="lightboxImage" src="" alt="Gallery preview" />
+            <div class="lightbox-caption">
+              <span id="lightboxCounter">1 / 1</span>
+              <p id="lightboxTitle"></p>
+            </div>
+          </div>
+          <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
+        </div>
+      `;
+      document.body.appendChild(modal);
+
+      overlay = document.getElementById('lightboxOverlay');
+      stageImg = document.getElementById('lightboxImage');
+      captionCounter = document.getElementById('lightboxCounter');
+      captionTitle = document.getElementById('lightboxTitle');
+      closeBtn = document.getElementById('lightboxClose');
+      prevBtn = document.getElementById('lightboxPrev');
+      nextBtn = document.getElementById('lightboxNext');
+
+      closeBtn.addEventListener('click', close);
+      overlay.addEventListener('click', close);
+      prevBtn.addEventListener('click', prev);
+      nextBtn.addEventListener('click', next);
+
+      document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('is-active')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') prev();
+        if (e.key === 'ArrowRight') next();
+      });
+    }
+
+    function update() {
+      if (!currentImages.length) return;
+      stageImg.style.opacity = '0.5';
+      stageImg.src = currentImages[currentIndex];
+      stageImg.onload = () => { stageImg.style.opacity = '1'; };
+      stageImg.onerror = () => { stageImg.src = 'assets/images/placeholder.svg'; stageImg.style.opacity = '1'; };
+      
+      captionCounter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+      captionTitle.textContent = currentProjectName ? `${currentProjectName} (${currentIndex === 0 ? 'Cover Image' : 'Screenshot ' + currentIndex})` : '';
+
+      prevBtn.style.display = currentImages.length > 1 ? 'flex' : 'none';
+      nextBtn.style.display = currentImages.length > 1 ? 'flex' : 'none';
+    }
+
+    function open(images, index = 0, projectName = '') {
+      createModal();
+      currentImages = Array.isArray(images) ? images.filter(Boolean) : [images];
+      if (!currentImages.length) return;
+      currentIndex = (index >= 0 && index < currentImages.length) ? index : 0;
+      currentProjectName = projectName;
+
+      update();
+      modal.classList.add('is-active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+    }
+
+    function close() {
+      if (!modal) return;
+      modal.classList.remove('is-active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-open');
+    }
+
+    function prev() {
+      if (currentImages.length <= 1) return;
+      currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+      update();
+    }
+
+    function next() {
+      if (currentImages.length <= 1) return;
+      currentIndex = (currentIndex + 1) % currentImages.length;
+      update();
+    }
+
+    return { open, close, prev, next };
+  })();
+
+  window.PortfolioLightbox = Lightbox;
+
   function populateProjectDetails() {
-    const params = new URLSearchParams(window.location.search);
-    const slug = params.get('id');
+    const searchStr = window.location.search;
+    const params = new URLSearchParams(searchStr);
+    let slug = params.get('id');
+
+    // Fallback: If URL search contains 'id=', extract full value before other params (handles unencoded '&' in name like ?id=AK Tours & Travels)
+    if (searchStr.includes('id=')) {
+      const match = searchStr.match(/[?&]id=([^&]*)/);
+      if (match && match[1]) {
+        slug = decodeURIComponent(match[1]);
+      }
+    }
+
     if (!slug) return;
 
-    const project = (window.portfolioData?.projects || []).find((entry) => entry.name === slug);
+    const projects = window.portfolioData?.projects || [];
+    const project = projects.find(
+      (entry) =>
+        entry.name === slug ||
+        entry.name.toLowerCase() === slug.toLowerCase() ||
+        encodeURIComponent(entry.name) === slug
+    );
     if (!project) return;
 
     document.title = `${project.name} | Portfolio`;
     document.getElementById('projectTitle').textContent = project.name;
     document.getElementById('projectTypeTag').textContent = project.type;
     document.getElementById('projectMeta').textContent = `${project.year} • ${project.technologies.join(' • ')}`;
-    document.getElementById('heroImage').src = project.image;
-    document.getElementById('heroImage').alt = `${project.name} preview`;
+    
+    const allImages = [project.image, ...(project.gallery || [])].filter(Boolean);
+
+    const heroImg = document.getElementById('heroImage');
+    if (heroImg) {
+      heroImg.src = project.image;
+      heroImg.alt = `${project.name} preview`;
+      heroImg.title = 'Click to view full screen gallery';
+      heroImg.onerror = function() { this.onerror = null; this.src = 'assets/images/placeholder.svg'; };
+      heroImg.addEventListener('click', () => {
+        window.PortfolioLightbox.open(allImages, 0, project.name);
+      });
+    }
+
     document.getElementById('problemStatement').textContent = project.problemStatement;
     document.getElementById('fullDescription').textContent = project.fullDescription;
     document.getElementById('highlightsList').innerHTML = project.highlights.map((item) => `<li>${item}</li>`).join('');
@@ -63,36 +195,28 @@
     document.getElementById('skillsList').innerHTML = project.skills.map((skill) => `<li>${skill}</li>`).join('');
     document.getElementById('challengesText').textContent = project.challenges;
     document.getElementById('solutionText').textContent = project.solution;
-    document.getElementById('galleryGrid').innerHTML = project.gallery.map((image) => `<img src="${image}" alt="${project.name} gallery" loading="lazy" />`).join('');
+    
+    const galleryGrid = document.getElementById('galleryGrid');
+    if (galleryGrid) {
+      galleryGrid.innerHTML = (project.gallery || []).map((image, idx) => 
+        `<img src="${image}" alt="${project.name} gallery screenshot ${idx + 1}" loading="lazy" data-index="${idx + 1}" title="Click to view full screen" onerror="this.onerror=null; this.src='assets/images/placeholder.svg';" />`
+      ).join('');
 
-    const githubLink = document.getElementById('githubLink');
-    const liveLink = document.getElementById('liveLink');
-    const playStoreLink = document.getElementById('playStoreLink');
-    const copyLinkBtn = document.getElementById('copyLinkBtn');
-    const shareProjectBtn = document.getElementById('shareProjectBtn');
-
-    if (githubLink) {
-      githubLink.href = project.github || '#';
-      githubLink.style.display = project.github ? 'inline-flex' : 'none';
+      galleryGrid.addEventListener('click', (e) => {
+        if (e.target.tagName === 'IMG') {
+          const index = parseInt(e.target.getAttribute('data-index') || '1', 10);
+          window.PortfolioLightbox.open(allImages, index, project.name);
+        }
+      });
     }
+
+    const liveLink = document.getElementById('liveLink');
+    const shareProjectBtn = document.getElementById('shareProjectBtn');
 
     if (liveLink) {
       liveLink.href = project.liveLink || '#';
       liveLink.style.display = project.liveLink ? 'inline-flex' : 'none';
     }
-
-    if (playStoreLink) {
-      playStoreLink.href = project.playStore || '#';
-      playStoreLink.style.display = project.playStore ? 'inline-flex' : 'none';
-    }
-
-    copyLinkBtn?.addEventListener('click', async () => {
-      await navigator.clipboard.writeText(project.github || window.location.href);
-      copyLinkBtn.textContent = 'Copied';
-      setTimeout(() => {
-        copyLinkBtn.textContent = 'Copy GitHub';
-      }, 1200);
-    });
 
     shareProjectBtn?.addEventListener('click', async () => {
       if (navigator.share) {

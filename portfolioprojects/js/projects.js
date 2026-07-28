@@ -7,7 +7,7 @@ const projects = [
     type: 'Personal',
     technologies: ['HTML/CSS', 'JavaScript'],
     description: 'A responsive food-themed landing page developed as an early front-end project to learn structure, layout, and modern UI design.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/foodwebsite1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -18,7 +18,7 @@ const projects = [
     skills: ['Front-End Development', 'Responsive Web Design', 'Semantic HTML', 'CSS Layout & Styling', 'UI Design Fundamentals', 'Problem Solving'],
     challenges: 'The biggest challenge was learning to create a polished layout while keeping the code clean and structured from the beginning.',
     solution: 'The project was built with semantic HTML, thoughtful spacing, and CSS-driven layout techniques to create a user-friendly experience.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/foodwebsite2.png'), normalizeAssetPath('assets/images/foodwebsite3.png')]
   },
   {
     name: 'Calculator',
@@ -26,7 +26,7 @@ const projects = [
     type: 'Personal',
     technologies: ['HTML/CSS', 'JavaScript'],
     description: 'A responsive calculator app built while learning JavaScript fundamentals, focusing on interactive UI and core arithmetic logic.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/Calculator1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -37,7 +37,7 @@ const projects = [
     skills: ['JavaScript Programming', 'DOM Manipulation', 'Event Handling', 'Front-End Development', 'Responsive Web Design', 'CSS Animations', 'UI Enhancement', 'Problem Solving'],
     challenges: 'The main challenge was making the experience feel smooth while applying JavaScript logic cleanly and predictably.',
     solution: 'The app used clear state handling, event listeners, and a polished visual structure to make interactions intuitive.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/Calculator2.png'), normalizeAssetPath('assets/images/Calculator3.png')]
   },
   {
     name: 'RoboJoker',
@@ -45,7 +45,7 @@ const projects = [
     type: 'Personal',
     technologies: ['HTML/CSS', 'JavaScript', 'REST API'],
     description: 'An interactive chatbot-style web app that fetches random jokes from a public API and displays them in a modern chat UI.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/Robojoker1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -56,7 +56,7 @@ const projects = [
     skills: ['REST API Integration', 'Fetch API', 'Asynchronous JavaScript', 'DOM Manipulation', 'JSON Data Handling', 'Event Handling', 'Front-End Development', 'Responsive UI Design', 'Interactive Web Application Development'],
     challenges: 'The key challenge was creating a smooth experience while handling asynchronous data and rendering updates cleanly.',
     solution: 'The app used simple state updates and asynchronous request handling to make the conversation feel natural and responsive.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/Robojoker2.png'), normalizeAssetPath('assets/images/Robojoker3.png')]
   },
   {
     name: 'AgroShop',
@@ -64,7 +64,7 @@ const projects = [
     type: 'College',
     technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'MySQL'],
     description: 'An agriculture-focused e-commerce website built as a college project with product browsing, cart management, and order placement.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/Agroshop1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -75,7 +75,7 @@ const projects = [
     skills: ['Full-Stack Web Development', 'E-commerce Application Development', 'MySQL Database Design', 'CRUD Operations', 'Shopping Cart Implementation', 'Order Management', 'Payment Workflow Integration', 'Database Connectivity', 'Responsive UI Development', 'Front-End & Back-End Integration', 'Problem Solving', 'Web Application Development'],
     challenges: 'The main challenge was creating an end-to-end e-commerce flow that felt practical for farmers and easy to navigate.',
     solution: 'The platform used a straightforward product workflow, clear cart interactions, and a database-backed order system to make the experience usable.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/Agroshop2.png'), normalizeAssetPath('assets/images/Agroshop3.png')]
   },
   {
     name: 'AK Tours & Travels',
@@ -83,7 +83,7 @@ const projects = [
     type: 'Freelance',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML/CSS', 'JavaScript'],
     description: 'A full-stack travel website for a tourism agency featuring packages, offers, inquiry forms, feedback, and a modern responsive experience.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/aktoursandtravels1.png'),
     github: '',
     liveLink: 'https://www.aktoursandtravels.info/',
     playStore: '',
@@ -94,7 +94,7 @@ const projects = [
     skills: ['MERN Stack Development', 'Full-Stack Web Development', 'React.js Development', 'REST API Development', 'MongoDB Database Design', 'Express.js & Node.js', 'Responsive Web Design', 'Component-Based Architecture', 'Business Website Development', 'Customer Feedback Management', 'Content Management', 'Deployment & Production Hosting', 'Client Requirement Analysis', 'Freelance Project Development'],
     challenges: 'The work required translating business requirements into a polished website that could support both marketing and customer interaction flows.',
     solution: 'The solution combined reusable React components, structured content modules, and a scalable backend to make the experience maintainable and professional.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/aktoursandtravels2.png'), normalizeAssetPath('assets/images/aktoursandtravels3.png')]
   },
   {
     name: 'Recipedia',
@@ -102,7 +102,7 @@ const projects = [
     type: 'Personal',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Google Gemini API', 'JavaScript', 'HTML/CSS'],
     description: 'An AI-powered recipe-sharing platform that suggests recipes from leftover ingredients to reduce food waste and support everyday cooking.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/recipedia1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -113,7 +113,7 @@ const projects = [
     skills: ['MERN Stack Development', 'Full-Stack Web Development', 'AI Integration using Google Gemini API', 'Prompt Engineering', 'REST API Development', 'React.js Development', 'Node.js & Express.js Backend Development', 'MongoDB Database Design', 'Authentication & Authorization', 'CRUD Operations', 'Component-Based Architecture', 'Responsive Web Design', 'API Integration', 'Database Management', 'Frontend & Backend Integration', 'Scalable Application Architecture', 'AI-Based Problem Solving', 'Sustainable Solution Development', 'Modern Web Application Development'],
     challenges: 'The key challenge was blending AI recommendations with a practical everyday cooking experience while keeping the interface approachable.',
     solution: 'The app paired a modern UI with structured prompts and a simple basket workflow to make ingredient-based recommendations useful and fast.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/recipedia2.png'), normalizeAssetPath('assets/images/recipedia3.png')]
   },
   {
     name: 'DigitoMize',
@@ -121,9 +121,9 @@ const projects = [
     type: 'Personal',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript', 'HTML/CSS'],
     description: 'A placement preparation platform combining company-specific questions, hackathon discovery, and a blogging system for student learning.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/Digitomize1.png'),
     github: '',
-    liveLink: '',
+    liveLink: 'https://digitomize-orcin.vercel.app/home',
     playStore: '',
     tags: ['personal', 'mern', 'education'],
     problemStatement: 'Students often had to search across multiple websites for company-specific preparation resources, hackathons, and peer guidance. DigitoMize centralizes these needs in one platform.',
@@ -132,7 +132,7 @@ const projects = [
     skills: ['Full-Stack Web Development', 'MERN Stack Development', 'REST API Development', 'Third-Party API Integration', 'React.js Development', 'Node.js & Express.js Backend Development', 'MongoDB Database Design', 'Authentication & Authorization', 'CRUD Operations', 'Blog Management System', 'Community Platform Development', 'Responsive Web Design', 'Database Management', 'Frontend & Backend Integration', 'Scalable Application Architecture', 'Educational Platform Development', 'Problem Solving', 'Modern Web Application Development'],
     challenges: 'The challenge was making a large information platform feel organized rather than overwhelming.',
     solution: 'The app uses structured categories, company-based modules, and clean content organization to keep the experience focused and accessible.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/Digitomize2.png'), normalizeAssetPath('assets/images/Digitomize3.png')]
   },
   {
     name: 'Real-Time Photo Gallery',
@@ -140,7 +140,7 @@ const projects = [
     type: 'Freelance',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'JavaScript', 'HTML/CSS'],
     description: 'A full-stack photography portfolio with real-time likes and comments for instant audience interaction.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/Real-Time Photo Gallery1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -151,7 +151,7 @@ const projects = [
     skills: ['Full-Stack Web Development', 'MERN Stack Development', 'Real-Time Application Development', 'Socket.IO Integration', 'REST API Development', 'React.js Development', 'Node.js & Express.js Backend Development', 'MongoDB Database Design', 'Authentication & Authorization', 'Responsive UI/UX Design', 'Frontend & Backend Integration', 'Database Management', 'Component-Based Architecture', 'Performance Optimization', 'Real-Time Data Synchronization', 'Client Requirement Analysis', 'Freelance Project Development', 'International Client Collaboration', 'Modern Web Application Development'],
     challenges: 'The main challenge was building a real-time experience that felt smooth and reliable under live interaction conditions.',
     solution: 'The architecture used efficient real-time communication and a responsive interface to provide immediate feedback without page refreshes.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/Real-Time Photo Gallery2.png'), normalizeAssetPath('assets/images/Real-Time Photo Gallery3.png')]
   },
   {
     name: 'MatchWise',
@@ -159,7 +159,7 @@ const projects = [
     type: 'Hackathon',
     technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript', 'HTML/CSS'],
     description: 'A compatibility assessment platform developed during a hackathon to help users understand compatibility before starting conversations.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/MatchWise1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -170,7 +170,7 @@ const projects = [
     skills: ['MERN Stack Development', 'Full-Stack Web Development', 'Algorithm Design', 'Compatibility Score Calculation', 'React.js Development', 'Node.js & Express.js Backend Development', 'MongoDB Database Design', 'Authentication & Authorization', 'REST API Development', 'CRUD Operations', 'Responsive Web Design', 'Frontend & Backend Integration', 'Database Management', 'Component-Based Architecture', 'Data Analysis & Result Visualization', 'Problem Solving', 'Hackathon Project Development', 'Modern Web Application Development'],
     challenges: 'The challenge was designing a meaningful compatibility model without making the experience overly complex.',
     solution: 'The system used structured questions and a clear scoring approach to turn user data into understandable compatibility insights.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/MatchWise2.png'), normalizeAssetPath('assets/images/MatchWise3.png')]
   },
   {
     name: 'BuildHub',
@@ -178,7 +178,7 @@ const projects = [
     type: 'Freelance',
     technologies: ['Java', 'Firebase', 'Android Studio', 'XML'],
     description: 'A full-stack Android marketplace for construction materials that connects suppliers, buyers, and administrators in one application.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/Buildhub1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -189,7 +189,7 @@ const projects = [
     skills: ['Android Application Development', 'Java Development', 'Firebase Integration', 'Firebase Authentication', 'Firebase Database Management', 'E-commerce Application Development', 'Role-Based Access Control', 'CRUD Operations', 'Real-Time Database Integration', 'Mobile UI/UX Design', 'Android Architecture', 'Problem Solving', 'Client Requirement Analysis', 'Freelance Project Development', 'Modern Mobile Application Development'],
     challenges: 'The main challenge was supporting a multi-role workflow while keeping the app intuitive for different user groups.',
     solution: 'The application separated the experience into buyer, supplier, and admin flows with clear navigation and role-based permissions.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/Buildhub2.png'), normalizeAssetPath('assets/images/Buildhub3.png')]
   },
   {
     name: 'Hotel Management System',
@@ -197,7 +197,7 @@ const projects = [
     type: 'Personal',
     technologies: ['Java', 'OOP', 'Collections Framework'],
     description: 'A Java CLI application that simulates hotel operations such as booking, check-in, check-out, and billing.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/Hotel Management System1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -208,7 +208,7 @@ const projects = [
     skills: ['Core Java Development', 'Object-Oriented Programming (OOP)', 'Java Collections Framework', 'Classes & Objects', 'Encapsulation', 'Inheritance', 'Polymorphism', 'Abstraction', 'Data Structures', 'CRUD Operations', 'Console Application Development', 'Problem Solving', 'Software Design Principles'],
     challenges: 'The challenge was modeling real-world hotel workflows in a simple CLI system without relying on frameworks.',
     solution: 'The app used clear classes, modular menus, and structured record handling to simulate a practical management workflow.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/Hotel Management System2.png'), normalizeAssetPath('assets/images/Hotel Management System3.png')]
   },
   {
     name: 'Advanced Employee Management System',
@@ -216,7 +216,7 @@ const projects = [
     type: 'Personal',
     technologies: ['Java', 'OOP', 'Collections Framework'],
     description: 'A console-based employee management system for managing departments, salaries, attendance, and employee records.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/Employee Management1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -227,7 +227,7 @@ const projects = [
     skills: ['Core Java Development', 'Object-Oriented Programming (OOP)', 'Java Collections Framework', 'Classes & Objects', 'Encapsulation', 'Inheritance', 'Polymorphism', 'Abstraction', 'CRUD Operations', 'Console Application Development', 'Data Management', 'Software Design Principles', 'Problem Solving', 'Business Application Development'],
     challenges: 'The main challenge was creating a realistic system while keeping the functionality accessible in a CLI environment.',
     solution: 'The app used clear business logic modules and menus to mirror common HR workflows without unnecessary complexity.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/Employee Management2.png'), normalizeAssetPath('assets/images/Employee Management3.png')]
   },
   {
     name: 'CODE404',
@@ -235,7 +235,7 @@ const projects = [
     type: 'Hackathon',
     technologies: ['Java', 'Firebase', 'OOP', 'Collections Framework'],
     description: 'A gamified aptitude application developed for a club event to manage live assessments and real-time score updates.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/code404-1.jpg'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -246,7 +246,7 @@ const projects = [
     skills: ['Core Java Development', 'Firebase Integration', 'Firebase Realtime Database', 'Object-Oriented Programming (OOP)', 'Java Collections Framework', 'CRUD Operations', 'Real-Time Database Management', 'Admin Dashboard Development', 'Event Management System Development', 'Business Logic Implementation', 'Interactive Application Development', 'Problem Solving', 'Software Design Principles', 'Team Collaboration'],
     challenges: 'The hardest part was ensuring the app stayed reliable during live use with a large participant base.',
     solution: 'The project used Firebase real-time services and a focused admin workflow to keep operations fast and dependable.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/code404-2.jpeg'), normalizeAssetPath('assets/images/code404-3.jpeg')]
   },
   {
     name: 'CaneScheduler',
@@ -254,7 +254,7 @@ const projects = [
     type: 'Personal',
     technologies: ['Flutter', 'Dart', 'Firebase', 'Riverpod', 'Clean Architecture'],
     description: 'A cross-platform farm management app for sugarcane growers that supports scheduling, irrigation planning, fertilizer tracking, and reports.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/caneschedular1.jpg'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -265,7 +265,7 @@ const projects = [
     skills: ['Flutter Application Development', 'Dart Programming', 'Firebase Integration', 'Cloud Firestore Database Design', 'Firebase Authentication', 'Firebase Cloud Messaging', 'Cloud Functions', 'Clean Architecture', 'MVVM Architecture', 'State Management (Riverpod)', 'REST API Integration', 'Weather API Integration', 'CRUD Operations', 'Real-Time Data Synchronization', 'Push Notification Implementation', 'Farm Management System Design', 'Scheduling & Calendar Logic', 'Report & Analytics Development', 'Business Logic Implementation', 'Software Architecture & Design', 'Problem Solving', 'Scalable Mobile Application Development'],
     challenges: 'The biggest challenge was designing a comprehensive farming workflow while keeping it practical for everyday field use.',
     solution: 'The app combined structured scheduling, weather-aware logic, and clear reports to make farm management easier and more actionable.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/caneschedular2.png'), normalizeAssetPath('assets/images/caneschedular3.png')]
   },
   {
     name: 'SplitMate',
@@ -273,7 +273,7 @@ const projects = [
     type: 'Personal',
     technologies: ['Flutter', 'Dart', 'Firebase', 'Provider', 'Material 3'],
     description: 'A friend debt and expense tracker for logging borrowed and lent money, settlements, reminders, and monthly summaries.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/splitmate1.png'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -284,7 +284,7 @@ const projects = [
     skills: ['Flutter Development', 'Dart Programming', 'Firebase Authentication', 'Cloud Firestore Integration', 'Firebase Storage', 'Firebase Cloud Messaging', 'Mobile UI/UX Design', 'Material 3 Design', 'State Management (Provider/Riverpod)', 'Clean Architecture', 'Object-Oriented Programming (OOP)', 'CRUD Operations', 'Real-Time Database Management', 'Financial Management System Development', 'Dashboard Development', 'Data Modeling', 'Business Logic Implementation', 'Responsive Mobile Application Development', 'Problem Solving', 'Software Design Principles', 'Scalable Application Architecture'],
     challenges: 'The challenge was building a financial tool that would stay easy to use while still supporting detailed transaction logic.',
     solution: 'The product uses a clear dashboard, structured transaction records, and automated balance calculations to make debt tracking straightforward.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/splitmate2.png'), normalizeAssetPath('assets/images/splitmate3.png')]
   },
   {
     name: 'Conference Management App',
@@ -292,7 +292,7 @@ const projects = [
     type: 'Freelance',
     technologies: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'FCM'],
     description: 'A cross-platform conference app for organizers and participants with schedules, notifications, announcements, and real-time updates.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/conferenceapp1.jpg'),
     github: '',
     liveLink: '',
     playStore: '',
@@ -303,7 +303,7 @@ const projects = [
     skills: ['Flutter Application Development', 'Dart Programming', 'Firebase Integration', 'Cloud Firestore', 'Firebase Authentication', 'Firebase Cloud Messaging (FCM)', 'Real-Time Database Synchronization', 'Mobile UI/UX Design', 'Role-Based Access Control', 'Push Notifications', 'Real-Time Chat Development', 'Cross-Platform Mobile Development', 'Scalable Application Development', 'Cloud Deployment', 'Production Application Management', 'Team Collaboration', 'Event Management System Development', 'Problem Solving'],
     challenges: 'The biggest challenge was ensuring live updates reached all participants instantly while the event was active.',
     solution: 'The app used Firebase real-time services and role-based modules to make conference updates fast, organized, and reliable.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/conferenceapp2.png'), normalizeAssetPath('assets/images/conferenceapp3.png')]
   },
   {
     name: 'Kagwad Connect',
@@ -311,9 +311,9 @@ const projects = [
     type: 'Live Project',
     technologies: ['Flutter', 'Dart', 'Firebase', 'Cloud Firestore', 'Cloudinary'],
     description: 'A community information app for Kagwad Taluka with local news, announcements, emergency contacts, and bilingual updates.',
-    image: normalizeAssetPath('assets/images/placeholder.svg'),
+    image: normalizeAssetPath('assets/images/kagwadconnect1.png'),
     github: '',
-    liveLink: '',
+    liveLink: 'https://play.google.com/store/apps/details?id=com.oysterkode.kagwad',
     playStore: '',
     tags: ['live', 'flutter', 'firebase'],
     problemStatement: 'Residents of small towns often rely on fragmented information sources, making local communication slow and inconsistent. Kagwad Connect was built to centralize that information.',
@@ -322,7 +322,7 @@ const projects = [
     skills: ['Flutter Application Development', 'Dart Programming', 'Firebase Integration', 'Cloud Firestore', 'Cloudinary Integration', 'Mobile UI/UX Design', 'Real-Time Database Synchronization', 'Multilingual Application Development', 'Firebase Cloud Messaging', 'Cross-Platform Mobile Development', 'Cloud Storage Integration', 'Production Deployment', 'Google Play Store Deployment', 'Scalable Mobile Application Architecture', 'Client Requirement Analysis', 'Freelance Project Development', 'Live Production Application Development', 'Problem Solving'],
     challenges: 'The biggest challenge was making local community information accessible and timely while supporting bilingual content.',
     solution: 'The app combines Firestore-backed updates, Cloudinary media storage, and multilingual content delivery to make local communication practical and scalable.',
-    gallery: [normalizeAssetPath('assets/images/placeholder.svg'), normalizeAssetPath('assets/images/placeholder.svg')]
+    gallery: [normalizeAssetPath('assets/images/kagwadconnect2.png'), normalizeAssetPath('assets/images/kagwadconnect3.png')]
   }
 ];
 

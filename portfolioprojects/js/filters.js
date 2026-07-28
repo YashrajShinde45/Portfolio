@@ -79,7 +79,7 @@
       card.className = 'project-card';
       card.setAttribute('tabindex', '0');
       card.innerHTML = `
-        <img loading="lazy" src="${project.image}" alt="${project.name} preview" />
+        <img loading="lazy" src="${project.image}" alt="${project.name} preview" onerror="this.onerror=null; this.src='assets/images/placeholder.svg';" />
         <div class="project-body">
           <div class="project-meta">
             <span>${project.year}</span>
@@ -91,13 +91,23 @@
             ${project.technologies.slice(0, 3).map((tech) => `<span class="badge">${tech}</span>`).join('')}
           </div>
           <p>${project.description}</p>
-              <div class="project-actions-row">
-            <a class="btn btn-primary" href="project.html?id=${project.name}">Read More</a>
-            ${project.github ? `<a class="btn btn-secondary" href="${project.github}" target="_blank" rel="noopener">GitHub</a>` : '<button class="btn btn-secondary" type="button" disabled>GitHub Not Available</button>'}
-            ${project.liveLink ? `<a class="btn btn-tertiary" href="${project.liveLink}" target="_blank" rel="noopener">Live Preview</a>` : '<button class="btn btn-tertiary" type="button" disabled>Live Preview Not Available</button>'}
-            ${project.playStore ? `<a class="btn btn-ghost" href="${project.playStore}" target="_blank" rel="noopener">Play Store</a>` : '<button class="btn btn-ghost" type="button" disabled>Play Store Not Available</button>'}
+          <div class="project-actions-row">
+            <a class="btn btn-primary" href="project.html?id=${encodeURIComponent(project.name)}">Read More</a>
+            ${project.liveLink ? `<a class="btn btn-secondary" href="${project.liveLink}" target="_blank" rel="noopener">Live Preview</a>` : ''}
           </div>
         </div>`;
+
+      const cardImg = card.querySelector('img');
+      if (cardImg) {
+        cardImg.title = 'Click to view full screen gallery';
+        cardImg.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const allImages = [project.image, ...(project.gallery || [])].filter(Boolean);
+          if (window.PortfolioLightbox) {
+            window.PortfolioLightbox.open(allImages, 0, project.name);
+          }
+        });
+      }
 
       requestAnimationFrame(() => {
         card.classList.add('is-visible');
