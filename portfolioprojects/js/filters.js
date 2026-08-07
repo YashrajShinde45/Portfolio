@@ -20,9 +20,9 @@
       case 'alphabetical':
         return sorted.sort((a, b) => a.name.localeCompare(b.name));
       case 'live':
-        return sorted.sort((a, b) => Number(b.tags.includes('live')) - Number(a.tags.includes('live')));
+        return sorted.sort((a, b) => Number(b.tags.includes('live') || b.type === 'Live Project') - Number(a.tags.includes('live') || a.type === 'Live Project'));
       case 'freelance':
-        return sorted.sort((a, b) => Number(b.type === 'Freelance') - Number(a.type === 'Freelance'));
+        return sorted.sort((a, b) => Number(b.type === 'Freelance' || b.tags.includes('freelance')) - Number(a.type === 'Freelance' || a.tags.includes('freelance')));
       case 'newest':
       default:
         return sorted.sort((a, b) => b.year - a.year || a.name.localeCompare(b.name));
@@ -180,8 +180,8 @@
 
     const projectsList = getProjects();
     const total = projectsList.length;
-    const live = projectsList.filter((project) => project.tags.includes('live')).length;
-    const freelance = projectsList.filter((project) => project.type === 'Freelance').length;
+    const live = projectsList.filter((project) => project.tags.includes('live') || project.type === 'Live Project').length;
+    const freelance = projectsList.filter((project) => project.type === 'Freelance' || project.tags.includes('freelance')).length;
     const internship = projectsList.filter((project) => project.type === 'Internship').length;
 
     const stats = [
