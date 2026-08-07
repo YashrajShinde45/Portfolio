@@ -9831,3 +9831,20 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.btn-see-more-projects {
+  padding: 16px 42px !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.8px !important;
+  border-radius: 50px !important;
+  box-shadow: 0 8px 25px rgba(255, 189, 89, 0.35) !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
+}
+
+.btn-see-more-projects:hover {
+  transform: translateY(-3px) scale(1.04) !important;
+  box-shadow: 0 12px 32px rgba(255, 189, 89, 0.55) !important;
+}
+
